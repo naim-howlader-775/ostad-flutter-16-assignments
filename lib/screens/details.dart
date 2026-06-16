@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-class Details extends StatefulWidget {
+class Details extends StatelessWidget {
   const Details({super.key, required this.counterValue});
   final int counterValue;
-  @override
-  State<Details> createState() => _DetailsState();
-}
-
-class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +10,11 @@ class _DetailsState extends State<Details> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: .center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Received counter value",style: TextStyle(fontSize: 16),),
             SizedBox(height: 10,),
-            Text(widget.counterValue.toString(),style: TextStyle(fontSize: 35,fontWeight: .bold),),
+            Text(counterValue.toString(),style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
             SizedBox(height: 10,),
             ElevatedButton(onPressed: (){
               Navigator.pop(context);

@@ -9,15 +9,25 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<Widget> screens = [
+  final List<Widget> screens = [
     Home(),
     About(),
+  ];
+  final List<String> title = [
+    "Home",
+    ""
   ];
   int screenIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[screenIndex],
+      appBar: AppBar(
+        title: Text(title[screenIndex]),
+      ),
+      body: IndexedStack(
+        index: screenIndex,
+        children: screens,
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: screenIndex,
         onDestinationSelected: (index){
