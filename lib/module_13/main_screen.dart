@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:of_assignments/module_13/about.dart';
 import 'package:of_assignments/module_13/home.dart';
-class Base extends StatefulWidget {
-  const Base({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<Base> createState() => _BaseState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _BaseState extends State<Base> {
+class _MainScreenState extends State<MainScreen> {
   List<Widget> screens = [
     Home(),
     About(),

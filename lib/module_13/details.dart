@@ -19,7 +19,7 @@ class _DetailsState extends State<Details> {
           children: [
             Text("Received counter value",style: TextStyle(fontSize: 16),),
             SizedBox(height: 10,),
-            Text(widget.counterValue.toString(),style: TextStyle(fontSize: 30),),
+            Text(widget.counterValue.toString(),style: TextStyle(fontSize: 35,fontWeight: .bold),),
             SizedBox(height: 10,),
             ElevatedButton(onPressed: (){
               Navigator.pop(context);

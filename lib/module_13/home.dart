@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
           children: [
             Text("Counter Value",style: TextStyle(fontSize: 20),),
             SizedBox(height: 10,),
-            Text(number.toString(),style: TextStyle(fontSize: 30,fontWeight: .bold),),
+            Text(number.toString(),style: TextStyle(fontSize: 35,fontWeight: .bold),),
             SizedBox(height: 10,),
             Row(
               mainAxisAlignment: .center,
