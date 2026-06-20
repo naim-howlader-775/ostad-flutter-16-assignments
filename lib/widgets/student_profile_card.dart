@@ -14,7 +14,7 @@ class StudentProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 420.h,
+      height: 420,
       width: 350.w,
       child: Card(
         child: Padding(
@@ -31,15 +31,15 @@ class StudentProfileCard extends StatelessWidget {
                       if(isNew)
                         Positioned(
                           top: 0,
-                          right: -20,
+                          right: -16,
                           child: Container(
                             height: 20,
-                            width: 50,
+                            width: 40,
                             decoration: BoxDecoration(
                                 color: Colors.red,
                                 borderRadius: BorderRadius.circular(10)
                             ),
-                            child: Center(child: Text("New",style: TextStyle(color: Colors.white),)),
+                            child: Center(child: Text("New",style: TextStyle(color: Colors.white,fontSize: 12),)),
                           ),
                         )
                     ]
@@ -49,7 +49,7 @@ class StudentProfileCard extends StatelessWidget {
                   spacing: 4,
                   children: [
                     Text(name,style: TextStyle(fontSize: 22,color: AppColors.primary,fontWeight: FontWeight.bold),),
-                    Text("Id : $id",style: TextStyle(color: Colors.grey.shade600),),
+                    Text("ID : $id",style: TextStyle(color: Colors.grey.shade600),),
                     Text(department,style: TextStyle(color: Colors.grey.shade600),)
                   ],
                 ),

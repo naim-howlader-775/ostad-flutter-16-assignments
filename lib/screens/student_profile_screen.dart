@@ -115,16 +115,19 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
         title: Text("Student Profile",style: TextStyle(color: Colors.white),),
         centerTitle: true,
       ),
-      body: Center(
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: 400
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              isLoading ? StudentProfileShimmer() : StudentProfileCard(id: student1['id'],name: student1['name'],department: student1['department'],isNew : student1["isNew"],viewDetails: ()=>viewDetails(student1["id"], student1["name"], student1["department"]),isPresent : student1["isPresent"], markAsPresent : ()=> markAsPresent(student1["id"],student1["name"]))
-            ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 500,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                isLoading ? StudentProfileShimmer() : StudentProfileCard(id: student1['id'],name: student1['name'],department: student1['department'],isNew : student1["isNew"],viewDetails: ()=>viewDetails(student1["id"], student1["name"], student1["department"]),isPresent : student1["isPresent"], markAsPresent : ()=> markAsPresent(student1["id"],student1["name"]))
+              ],
+            ),
           ),
         ),
       ),

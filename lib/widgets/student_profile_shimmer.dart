@@ -10,7 +10,7 @@ class StudentProfileShimmer extends StatelessWidget {
       baseColor: Color(0xFFE0E0E0),
       highlightColor: Color(0xFFF5F5F5),
         child: Container(
-          height: 420.h,
+          height: 420,
           width: 350.w,
           decoration: BoxDecoration(
             color: Color(0xFFE0E0E0),
