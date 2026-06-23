@@ -10,6 +10,31 @@ class ContactScreen extends StatefulWidget {
 }
 
 class _ContactScreenState extends State<ContactScreen> {
+
+  final formKey = GlobalKey<FormState>();
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    nameController.dispose();
+    phoneController.dispose();
+  }
+
+  final List<Map<String, String>> contacts = [
+    {"name": "Aminul Islam", "phone": "01712345678"},
+    {"name": "Rahim Uddin", "phone": "01823456789"},
+    {"name": "Karim Ahmed", "phone": "01934567890"},
+    {"name": "Sadia Akter", "phone": "01645678901"},
+    {"name": "Nusrat Jahan", "phone": "01556789012"},
+    {"name": "Imran Hossain", "phone": "01767890123"},
+    {"name": "Tanvir Hasan", "phone": "01878901234"},
+    {"name": "Jannat Ara", "phone": "01989012345"},
+    {"name": "Sabbir Rahman", "phone": "01690123456"},
+    {"name": "Mehedi Hasan", "phone": "01501234567"},
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +48,9 @@ class _ContactScreenState extends State<ContactScreen> {
         child: Column(
           children: [
             SizedBox(height: 20,),
-            ContactForm(),
+            ContactForm(formKey: formKey,nameController: nameController,phoneController: phoneController,),
             SizedBox(height: 20,),
-            ContactList(),
+            ContactList(contacts: contacts,),
           ],
         ),
       ),

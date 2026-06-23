@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:of_assignments/core/constants/app_colors.dart';
 class ContactForm extends StatelessWidget {
-  const ContactForm({super.key});
-
+  const ContactForm({super.key,required this.formKey, required this.nameController, required this.phoneController});
+  final GlobalKey<FormState> formKey;
+  final TextEditingController nameController;
+  final TextEditingController phoneController;
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: formKey,
       child: Column(
         children: [
           TextFormField(
+            controller: nameController,
             decoration: InputDecoration(
                 hintText: "Enter Name",
                 enabledBorder: OutlineInputBorder(
@@ -25,6 +29,7 @@ class ContactForm extends StatelessWidget {
           ),
           SizedBox(height: 10,),
           TextFormField(
+            controller: phoneController,
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
                 hintText: "Enter Phone Number",
