@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:of_assignments/screens/student_profile_screen.dart';
+import 'package:of_assignments/screens/profile_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: "Ostad Flutter 16 Assignments",
           debugShowCheckedModeBanner: false,
-          home: StudentProfileScreen(),
+          home: ProfileScreen(),
         );
       },
     );
